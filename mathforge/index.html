@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f7fb">
+<meta name="description" content="EigenPath — a complete visual-first mathematics learning studio for IPU Unit III & IV and deep learning, from first principles to research.">
+<title>EigenPath | Math for Deep Learning & IPU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+<script src="./curriculum.js" defer></script>
+<script src="./app.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a href="#dashboard" class="brand" aria-label="EigenPath home"><span class="brand-symbol">∑</span><span>eigen<span class="brand-blue">path</span><small>MATHEMATICS STUDIO</small></span></a>
+    <div class="side-block">
+      <div class="side-label">YOUR WORKSPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a href="#dashboard" data-nav="dashboard"><span class="nav-glyph">◫</span>Overview</a>
+        <a href="#roadmap" data-nav="roadmap"><span class="nav-glyph">⌘</span>Unified roadmap</a>
+        <a href="#practice" data-nav="practice"><span class="nav-glyph">✎</span>Question bank</a>
+        <a href="#labs" data-nav="labs"><span class="nav-glyph">◇</span>Interactive labs</a>
+        <a href="#resources" data-nav="resources"><span class="nav-glyph">▤</span>Reference library</a>
+        <a href="#planner" data-nav="planner"><span class="nav-glyph">▦</span>Study planner</a>
+      </nav>
+    </div>
+    <div class="side-block side-track">
+      <div class="side-label">YOUR TWO TRACKS</div>
+      <button class="side-track-btn" data-track="ipu"><span class="track-dot orange"></span>IPU exam prep <span class="track-arrow">↗</span></button>
+      <button class="side-track-btn" data-track="dl"><span class="track-dot violet"></span>Deep learning <span class="track-arrow">↗</span></button>
+      <button class="side-track-btn" data-track="research"><span class="track-dot teal"></span>Research frontier <span class="track-arrow">↗</span></button>
+    </div>
+    <div class="sidebar-spacer"></div>
+    <div class="side-bottom">
+      <div class="side-progress-label"><span>YOUR JOURNEY</span><strong id="sidebar-percent">0%</strong></div>
+      <div class="thin-progress"><div id="sidebar-progress-fill"></div></div>
+      <p id="sidebar-progress-caption">0 of 0 lessons completed</p>
+      <button id="export-btn" class="side-export">↧ &nbsp; Export study progress</button>
+      <small>Saved on this device · No account needed</small>
+    </div>
+  </aside>
+  <div class="main-area">
+    <header class="topbar">
+      <div class="top-left"><button class="icon-button mobile-menu" id="menu-btn" aria-label="Toggle menu">☰</button><span id="breadcrumb">Your learning workspace</span></div>
+      <div class="top-right"><label class="search-wrap" aria-label="Search mathematics lessons"><span>⌕</span><input type="search" id="global-search" placeholder="Search 60+ lessons…" autocomplete="off"><kbd>/</kbd></label><span class="header-divider"></span><button class="top-icon" id="quick-focus" title="Continue learning">↗</button><span class="avatar">M</span></div>
+      <div id="search-results" class="search-results hidden" role="listbox"></div>
+    </header>
+    <main id="view" tabindex="-1"></main>
+    <footer class="footer"><span>EigenPath · Learn the theory. See the geometry. Build the model.</span><span>Independent learning tool · Not an official IPU resource</span></footer>
+  </div>
+</div>
+<div id="toast" class="toast" role="status"></div>
+</body>
+</html>
